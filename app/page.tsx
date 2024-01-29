@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </Link>
 
-        <Link href="/CompanyPage">
+        <Link href="/ConnectPage">
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Company Connect{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
@@ -53,7 +53,7 @@ export default function Home() {
           </p>
         </Link>
 
-        <Link href="/AboutPage">
+        <Link href="/CompanyPage">
           <h2 className={`mb-3 text-2xl font-semibold`}>
             Meet the Team{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
