@@ -2,8 +2,8 @@ import React from "react"
 
 const PricingPage = () => {
     return (
-        <div>Pricing: 
-            <h1> $ 10 BILLION</h1>
+        <div>Congratulations on the new internship, Let's start making your experience perfect:
+            <h1>Name: </h1>
         </div>
     )
 }
