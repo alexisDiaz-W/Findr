@@ -1,6 +1,6 @@
 import React from "react"
 
-const companyPage = () => {
+const CompanyPage = () => {
     return (
         <div>Meet the Team
             <h1>Alexis Diaz</h1>
@@ -10,4 +10,4 @@ const companyPage = () => {
     )
 }
 
-export default companyPage
+export default CompanyPage

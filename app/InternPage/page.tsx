@@ -1,6 +1,6 @@
 import React from "react"
 
-const internPage = () => {
+const InternPage = () => {
     return (
         <div>Congratulation on your new internship.
             <h1>Let's get you connected with the other interns in your area.</h1>
@@ -8,4 +8,4 @@ const internPage = () => {
     )
 }
 
-export default internPage
+export default InternPage
