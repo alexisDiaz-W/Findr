@@ -16,7 +16,7 @@ h1 {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 100, 100, 255;
-    --background-end-rgb: 50, 50, 50;
+    --background-end-rgb: 255, 250, 250;
   }
 }
 
