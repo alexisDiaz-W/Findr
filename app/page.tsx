@@ -18,49 +18,51 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <Link href="/PricingPage">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+
+          <h2 className={`hover-h2`}>
             Pricing{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            <span className="...">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`... text-gray-500`}>
             Find out about our comprehensive pricing plans.
           </p>
+
         </Link>
 
         <Link href="/ConnectPage">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className={`hover-h2`}>
             Company Connect{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            <span className="...">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`... text-gray-500`}>
             Connect with our sales team to start giving your interns the perfect experience.
           </p>
         </Link>
 
         <Link href="/InternPage">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className={`hover-h2`}>
             Intern Sign Up{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            <span className="...">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`... text-gray-500`}>
             Interns, sign up here to begin your perfect intern experience.
           </p>
         </Link>
 
         <Link href="/CompanyPage">
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className={`hover-h2`}>
             Meet the Team{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+            <span className="...">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
+          <p className={`... text-gray-500`}>
           Meet the team behind Findr.
           </p>
         </Link>
