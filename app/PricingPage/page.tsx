@@ -16,12 +16,12 @@ const features = [
   {
     name: 'Beginner Pricing Plan',
     description:
-      'Start off with our basic pricing plan.',
+      'Start off with our basic pricing plan. Includes what you need with no extra frills.',
   },
   {
     name: 'Intermediate Pricing Plan',
     description:
-      'Meet our intermediate pricing plan.',
+      'Meet our intermediate pricing plan. Where features and pricing match.',
   },
   {
     name: 'Advanced Pricing Plan',
@@ -31,7 +31,7 @@ const features = [
   {
     name: 'Elite Pricing Plan',
     description:
-      'Get our best package with the elite pricing plan.',
+      'Get our best package with the elite pricing plan. All the features we provide.',
   },
 ]
 
