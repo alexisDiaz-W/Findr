@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import SignIn from './signin';
 
 function ResponsiveHamburgerMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +49,8 @@ function ResponsiveHamburgerMenu() {
        
         <div className="absolute top-16 left-4 z-40 w-48 bg-hMenuColor shadow-2xl">
           {/* Dropdown Links */}
-          <Link href="/SignIn" className="block p-5 border-b hover:bg-gray-500">Sign In</Link>
-          <Link href="/HomePage" className="block p-5 border-b hover:bg-gray-500">Home</Link>
+          <Link href= "/SignIn" className="block p-5 border-b hover:bg-gray-500">Sign In</Link>
+          <Link href="/" passHref className="block p-5 border-b hover:bg-gray-500">Home</Link>
           <Link href="/About" className="block p-5 border-b hover:bg-gray-500">About</Link>
           <Link href="/PricingPage" className="block p-5 border-b hover:bg-gray-500">Pricing</Link>
            <Link href="/ConnectPage" className="block p-5 border-b hover:bg-gray-500">Company Connect</Link>

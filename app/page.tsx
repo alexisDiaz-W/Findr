@@ -9,7 +9,7 @@ import HomeIconButton from "./homeButton";
 // import Navbar from "./Navbar";
 import { Alert } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
-
+import SignInIconButton from "./ResponsiveSignInButton/SingInButton";
 
 
 export default function Home() {
@@ -21,7 +21,8 @@ export default function Home() {
       
 
       <ResponsiveHamburgerMenu />
-        <HomeIconButton  />
+      <SignInIconButton   />
+       
         {/* <Navbar /> */}
         <div className="z-20 max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
           <p className="">

@@ -14,9 +14,9 @@ import { CiLogin } from 'react-icons/ci';
 import { GrLogin } from 'react-icons/gr';
 import { SlLogin } from 'react-icons/sl';
 import { VscAccount } from "react-icons/vsc";
-import SignIn from './SignIn/page';
+import SignIn from '../SignIn/sign_in_page';
 
-const HomeIconButton = () => {
+const SignInIconButton = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -38,11 +38,11 @@ const HomeIconButton = () => {
   if (windowWidth <= 768) {
     return (
       <div className=" fixed bottom-0 left-0 right-0 flex justify-center mb-4">
-        <Link href="/" passHref className="bg-white-500 rounded-full shadow-xl hover:bg-indigo-300 transition-colors duration-1000 ease-in-out p-3">
-          {/* FiHome is an attribute of react-icons */}
-            <FiHome className="h-6 w-6 text-gray-500" />
+        <Link href="./SignIn" passHref className=" bg-white-500 rounded-full shadow-xl hover:bg-indigo-300 transition-colors duration-100 ease-in-out p-3">
+          {/* <SignIn /> */}
+          {/* SlLogin is an attribute of react-icons  */}
+            <VscAccount  className=" h-6 w-6 text-gray-500" />
         </Link>
-    
       </div>
     );
   } else {
@@ -50,5 +50,6 @@ const HomeIconButton = () => {
   }
 };
 
-export default HomeIconButton;
+export default SignInIconButton;
+
 
