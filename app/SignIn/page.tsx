@@ -2,7 +2,7 @@
 "use client"
 import React from "react"
 import HomeIconButton from "../homeButton"
-import ResponsiveHamburgerMenu from "../Hmenu";
+// import ResponsiveHamburgerMenu from "../Hmenu";
 
 export default function SignIn() {
     return (
@@ -16,7 +16,7 @@ export default function SignIn() {
           <body class="h-full">
           ```
         */}
-        <ResponsiveHamburgerMenu />
+        {/* <ResponsiveHamburgerMenu /> */}
         <HomeIconButton />
 
      

@@ -1,16 +1,17 @@
 "use client";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
  import Head from "next/head"
 //  import React, { useState, useEffect } from "react";
-import ResponsiveHamburgerMenu from "./Hmenu";
+// import ResponsiveHamburgerMenu from "./Hmenu";
 import HomeIconButton from "./homeButton";
 // import { FiHome } from 'react-icons/fi';
 // import Navbar from "./Navbar";
 import { Alert } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
 import SignInIconButton from "./ResponsiveSignInButton/SingInButton";
-
+import NavBar from "./NavBar/navBar";
 
 export default function Home() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
@@ -19,8 +20,8 @@ export default function Home() {
       
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
       
-
-      <ResponsiveHamburgerMenu />
+      <NavBar />
+      
       <SignInIconButton   />
        
         {/* <Navbar /> */}
@@ -55,7 +56,7 @@ export default function Home() {
 
           <Link href="/ConnectPage" className="hidden md:block px-100 lg:px-100">
             <h2 className={`hover-h2`}>
-              Company Connect{" "}
+              Services{" "}
               <span className="...">
                 {/* -&gt; */}
               </span>
