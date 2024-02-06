@@ -1,8 +1,7 @@
 // /*
 // import React from "react"
 "use client"
-import { Navbar } from "flowbite-react"
-import NavBar from "../NavBar/navBar"
+
 // const PricingPage = () => {
 //     return (
 //         <div>Pricing: 
