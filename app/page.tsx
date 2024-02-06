@@ -5,7 +5,7 @@ import Link from "next/link";
  import Head from "next/head"
 //  import React, { useState, useEffect } from "react";
 // import ResponsiveHamburgerMenu from "./Hmenu";
-import HomeIconButton from "./homeButton";
+import HomeIconButton from "./HomeButton/homeButton";
 // import { FiHome } from 'react-icons/fi';
 // import Navbar from "./Navbar";
 import { Alert } from "flowbite-react";
@@ -22,7 +22,7 @@ export default function Home() {
       
       <NavBar />
       
-      <SignInIconButton   />
+      <SignInIconButton />
        
         {/* <Navbar /> */}
         <div className="z-20 max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">

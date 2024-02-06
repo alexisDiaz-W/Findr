@@ -33,7 +33,7 @@ const NavBar: React.FC = () => {
                 <div className={`${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto`} id="navbar-sticky">
                     <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Log in
+                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Sign in
                             </Link>
                         </li>
                         
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Log out
+                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500">Sign out
                             </Link>
                         </li>
                     </ul>
@@ -66,6 +66,5 @@ const NavBar: React.FC = () => {
             </div>
         </nav>
     );
-};
-
+    }
 export default NavBar;

@@ -1,7 +1,8 @@
 // import { Sign } from "crypto";
 "use client"
 import React from "react"
-import HomeIconButton from "../homeButton"
+import HomeIconButton from "../HomeButton/homeButton"
+import NavBar from "../NavBar/navBar"
 // import ResponsiveHamburgerMenu from "../Hmenu";
 
 export default function SignIn() {
@@ -18,6 +19,7 @@ export default function SignIn() {
         */}
         {/* <ResponsiveHamburgerMenu /> */}
         <HomeIconButton />
+        <NavBar />
 
      
         < div className = "flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-white" >

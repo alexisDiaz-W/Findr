@@ -14,7 +14,7 @@ import { CiLogin } from 'react-icons/ci';
 import { GrLogin } from 'react-icons/gr';
 import { SlLogin } from 'react-icons/sl';
 import { VscAccount } from "react-icons/vsc";
-import SignIn from './SignIn/page';
+import SignIn from '../SignIn/page';
 
 const HomeIconButton = () => {
   const [windowWidth, setWindowWidth] = useState(0);
