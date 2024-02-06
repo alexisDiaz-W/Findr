@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 h1 {
-  font-size: 75px;
+  font-size: 150px;
+  
 }
 
 :root {
@@ -16,7 +17,7 @@ h1 {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 100, 100, 255;
-    --background-end-rgb: 255, 250, 250;
+    --background-end-rgb: 220, 224, 222;
   }
 }
 
@@ -34,4 +35,30 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.hover-h2 {
+  @apply mb-3 text-2xl font-semibold transition duration-300 ease-in-out hover:text-gray-500;
+}
+
+.jura{
+  font-family: var(--font-jura) ;
+}
+
+.signInPage{
+  background-color: white;
+}
+
+/* html,
+body {
+  height: 100%;
+  background-color: white;
+} */
+
+/* In your global styles file */
+.gradient-text {
+  @apply text-8xl font-bold;
+  background: linear-gradient(to bottom,transparent, #6464ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
