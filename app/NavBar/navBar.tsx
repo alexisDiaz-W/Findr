@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+
+
 const NavBar: React.FC = () => {
     // State to manage the hamburger menu's visibility
     const [isOpen, setIsOpen] = useState(false);
@@ -10,11 +12,11 @@ const NavBar: React.FC = () => {
     return (
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://flowbite.com/" className="flex items-center">
+                <Link href="/"passHref className="flex items-center">
                     {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
                     <h3 className="jura text-3xl text-black">Fr</h3>
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                </a>
+                </Link>
                 <div className="flex md:order-5 space-x-2 md:space-x-4">
                     <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Get started</button>
                     <button
@@ -33,12 +35,12 @@ const NavBar: React.FC = () => {
                 <div className={`${isOpen ? 'flex' : 'hidden'} w-full md:flex md:w-auto`} id="navbar-sticky">
                     <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Sign in
+                            <Link href="/SignIn" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Sign in
                             </Link>
                         </li>
-                        
+
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-gray-700  rounded hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Home
+                            <Link href="/" passHref  className="block py-2 px-3 text-gray-700  rounded hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Home
                             </Link>
                         </li>
                         <li>
@@ -46,7 +48,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Services
+                            <Link href="/ConnectPage" passHref  className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Services
                             </Link>
                         </li>
                         <li>
@@ -54,7 +56,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Meet the Team
+                            <Link href="/CompanyPage" passHref className="block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500">Meet the Team
                             </Link>
                         </li>
                         <li>
@@ -66,5 +68,5 @@ const NavBar: React.FC = () => {
             </div>
         </nav>
     );
-    }
+}
 export default NavBar;

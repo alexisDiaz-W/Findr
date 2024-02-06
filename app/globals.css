@@ -62,3 +62,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* In your CSS file */
+.page-background {
+  background-color: #f0f0f0; /* Example color: light grey */
+}
+

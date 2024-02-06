@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
  import Head from "next/head"
@@ -12,8 +12,10 @@ import { Alert } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
 import SignInIconButton from "./ResponsiveSignInButton/SingInButton";
 import NavBar from "./NavBar/navBar";
+import React from 'react';
 
-export default function Home() {
+
+    export default function Home() {
   // const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
   return (
     <div>
@@ -100,6 +102,9 @@ export default function Home() {
 
   );
 }
+
+
+
 
 
 
