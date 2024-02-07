@@ -1,7 +1,6 @@
 // import { Sign } from "crypto";
 "use client"
 import React from "react"
-import HomeIconButton from "../HomeButton/homeButton"
 import NavBar from "../NavBar/navBar"
 // import ResponsiveHamburgerMenu from "../Hmenu";
 
@@ -19,7 +18,6 @@ export default function SignIn() {
           ```
         */}
         {/* <ResponsiveHamburgerMenu /> */}
-        <HomeIconButton />
         <NavBar />
 
      
