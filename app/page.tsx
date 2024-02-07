@@ -5,7 +5,6 @@ import Link from "next/link";
  import Head from "next/head"
 //  import React, { useState, useEffect } from "react";
 // import ResponsiveHamburgerMenu from "./Hmenu";
-import HomeIconButton from "./HomeButton/homeButton";
 // import { FiHome } from 'react-icons/fi';
 // import Navbar from "./Navbar";
 import { Alert } from "flowbite-react";
