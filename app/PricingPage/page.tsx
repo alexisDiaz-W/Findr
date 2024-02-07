@@ -1,16 +1,5 @@
-/*
-import React from "react"
 
-const PricingPage = () => {
-    return (
-        <div>Pricing: 
-            <h1> $ 10 BILLION</h1>
-        </div>
-    )
-}
-
-export default PricingPage
-*/
+"use client"
 
 const includedFeatures = [
   'Private forum access',
@@ -18,10 +7,17 @@ const includedFeatures = [
   'Entry to annual conference',
   'Official member t-shirt',
 ]
+import NavBar from "../NavBar/navBar"
 
-export default function Example() {
+import React from 'react';
+
+export default function Pricing() {
+  
   return (
-    <div className="bg-white py-24 sm:py-32">
+    
+     <div className="bg-white py-24 sm:py-32">
+      <NavBar />
+     
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
@@ -149,7 +145,7 @@ export default function Example() {
                   Get access
                 </a>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
-                  Invoices and receipts available for easy company reimbursement
+                  Invoices and receipts available for easy company reimbursement 
                 </p>
               </div>
             </div>
@@ -157,5 +153,7 @@ export default function Example() {
         </div>
       </div>
     </div>
+    
+   
   )
 }

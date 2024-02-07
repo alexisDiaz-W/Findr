@@ -35,3 +35,34 @@ body {
     text-wrap: balance;
   }
 }
+
+.hover-h2 {
+  @apply mb-3 text-2xl font-semibold transition duration-300 ease-in-out hover:text-gray-500;
+}
+
+.jura{
+  font-family: var(--font-jura) ;
+}
+
+.signInPage{
+  background-color: white;
+}
+
+/* html,
+body {
+  height: 100%;
+  background-color: white;
+} */
+
+/* In your global styles file */
+.gradient-text {
+  @apply text-8xl font-bold;
+  background: linear-gradient(to bottom,transparent, #6464ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* In your CSS file */
+.page-background {
+  background-color: #f0f0f0; /* Example color: light grey */
+}
+
