@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Jura } from "next/font/google";
 import "./globals.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -11,6 +12,7 @@ const jura_init = Jura({
   subsets: ['latin'],
   weight: ['700'],
   variable: '--font-jura',
+ 
 });
 
 
@@ -24,9 +26,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return ( 
     <html lang="en">
       <body className={jura_init.variable}>{children}</body>
     </html>
-  );
+  ); 
 }

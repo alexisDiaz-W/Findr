@@ -19,14 +19,14 @@ const NavBar: React.FC = () => {
 
                         <Link href="/" passHref className="mr-8">
                             {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
-                            <h3 className="jura text-3xl  text-black">Fr</h3>
+                            <h3 className="dark:text-white jura text-3xl  text-black">Fr</h3>
                             {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
                         </Link>
 
                         <button
                             onClick={() => setIsOpen(!isOpen)} // Toggle menu visibility
                             type="button"
-                            className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            className="dropdownMenuIcon_style"
                             aria-controls="navbar-sticky"
                             aria-expanded={isOpen}
                         >
@@ -40,21 +40,21 @@ const NavBar: React.FC = () => {
                     {/* Centered nav links for larger screens */}
                     {/* Navigation bar menu contents */}
                     <div className="hidden lg:flex justify-around items-center flex-grow">
-                        <Link href="/SignInPage" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Sign in</Link>
-                        <Link href="/" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Home</Link>
-                        <Link href="#" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">About</Link>
-                        <Link href="/CompanySignIn" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Company Sign in</Link>
-                        <Link href="/PricingPage" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Services</Link>
-                        <Link href="#" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</Link>
-                        <Link href="/CompanyPage" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-blue-700 hover:bg-gray-100 dark:hover:bg-gray-700">Meet the Team</Link>
-                        <Link href="#" passHref className=" text-gray-700 md:hover:bg-transparent  md:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700">Sign out</Link>
+                        <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
+                        <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link>
+                        <Link href="#" passHref className="itemsInNavBarMenu_style">About</Link>
+                        <Link href="/CompanySignIn" passHref className="itemsInNavBarMenu_style">Company Sign in</Link>
+                        <Link href="/PricingPage" passHref className="itemsInNavBarMenu_style">Pricing</Link>
+                        <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link>
+                        <Link href="/CompanyPage" passHref className="itemsInNavBarMenu_style">Meet the Team</Link>
+                        <Link href="#" passHref className="itemsInNavBarMenu_style">Sign out</Link>
                         {/* Add links */}
                     </div>
 
                     {/* Right-aligned section for larger screens, if needed */}
                     {/* Get Started button*/}
                     <div className=" md:flex justify-end items-center">
-                        <Link href="/SignInPage">
+                        <Link href="/SignIn">
                             <button type="button" className=" text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 m-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Get started</button>
                         </Link>
 
@@ -64,7 +64,7 @@ const NavBar: React.FC = () => {
 
                 {/* Mobile menu */}
                 {/* deleted: top-20 from className bellow. This gives the dropdown box space between the nav bar. */}
-                <div className={`rounded-sm  fixed  left-0 z-80 max-h-[calc(100%-5rem)] overflow-y-auto bg-white dark:bg-gray-800 shadow-2xl transform ${isOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-500 ease-in-out lg:hidden`}>
+                <div className={`nav_align_res transform ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
                     <button
                         onClick={() => setIsOpen(false)}
                         className="p-2 text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
@@ -79,37 +79,37 @@ const NavBar: React.FC = () => {
                     {/* Drop down menu contents */}
                     <ul className="flex-col items-start px-5 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <Link href="/SignInPage" passHref className="block my-3 px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100 md:border-0  md:p-2 dark:text-white ">Sign in
+                            <Link href="/SignIn" passHref className="itemsInDropMenu_style">Sign in
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/" className="block my-3 px-3 p-3 text-gray-700  rounded-lg hover:bg-gray-100   md:border-0  md:p-2 dark:text-white ">Home
+                            <Link href="/" className="itemsInDropMenu_style">Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block my-3  px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100 md:border-0  md:p-2 dark:text-white ">About
+                            <Link href="#" passHref className="itemsInDropMenu_style">About
                             </Link>
                         </li>
                         <li>
-                            <Link href="/CompanySignIn" passHref className="block my-3  px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100  md:border-0  md:p-2 dark:text-white ">Company Sign in
+                            <Link href="/CompanySignIn" passHref className="itemsInDropMenu_style">Company Sign in
                             </Link>
                         </li>
                         <li>
                             {/* AKA: Pricing */}
-                            <Link href="/PricingPage" passHref className="block my-3 px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100  md:border-0  md:p-2 dark:text-white ">Services
+                            <Link href="/PricingPage" passHref className="itemsInDropMenu_style">Pricing
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block my-3 px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100  md:border-0 md:p-2 dark:text-white ">Contact
+                            <Link href="#" passHref className="itemsInDropMenu_style">Contact
                             </Link>
                         </li>
                         <li>
-                            <Link href="/CompanyPage" passHref className="block my-3  px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100  md:border-0  md:p-2 dark:text-white">Meet the Team
+                            <Link href="/CompanyPage" passHref className="itemsInDropMenu_style">Meet the Team
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="block my-3 px-3 p-3 text-gray-700 rounded-lg hover:bg-gray-100  md:border-0 hover:text-red-700 md:p-2 dark:text-white">Sign out
+                            <Link href="#" passHref className="itemsInDropMenu_style">Sign out
                             </Link>
                         </li>
                     </ul>
