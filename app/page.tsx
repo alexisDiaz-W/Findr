@@ -20,9 +20,10 @@ import React from 'react';
   // const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu visibility
   return (
     
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="text-gray-600  flex min-h-screen flex-col items-center justify-between p-24">
+
       <NavBar />
-      <header className=" text-white max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
+      <header className=" text-gray-500 dark:text-white max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
           <p>
             Welcome to Findr, a place to connect in your intership experience.
           </p>

@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="bg-white  dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b text-gray-600 border-gray-200 dark:border-gray-600">
             <div className="max-w-screen-xl mx-auto px-4">
                 <div className="flex justify-between items-center py-3">
                     {/* Logo and hamburger menu for smaller screens */}
@@ -36,13 +36,14 @@ const NavBar: React.FC = () => {
                             </svg>
                         </button>
                     </div>
-        
+
                     {/* Centered nav links for larger screens */}
                     {/* Navigation bar menu contents */}
                     <div className="hidden lg:flex justify-around items-center flex-grow">
                         <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
                         <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link>
-                        <Link href="#" passHref className="itemsInNavBarMenu_style">About</Link>
+                        {/* Temp Post link, will replace with About. Using for building. */}
+                        <Link href="/InternProfilePage" passHref className="itemsInNavBarMenu_style">Post</Link>
                         <Link href="/CompanySignIn" passHref className="itemsInNavBarMenu_style">Company Sign in</Link>
                         <Link href="/PricingPage" passHref className="itemsInNavBarMenu_style">Pricing</Link>
                         <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link>
@@ -77,7 +78,7 @@ const NavBar: React.FC = () => {
                     </button>
 
                     {/* Drop down menu contents */}
-                    <ul className="flex-col items-start px-5 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="itemsInDropDownMenu_style ">
                         <li>
                             <Link href="/SignIn" passHref className="itemsInDropMenu_style">Sign in
                             </Link>
@@ -88,7 +89,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" passHref className="itemsInDropMenu_style">About
+                            <Link href="/InternProfilePage" passHref className="itemsInDropMenu_style">About
                             </Link>
                         </li>
                         <li>

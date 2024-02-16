@@ -6,11 +6,11 @@ import NavBar from "../NavBar/navBar"
 export default function SignIn() {
     return (
         <>
-
+        
             <NavBar />
   
             {/* pt-[60px], adjust 60px of height padding to match navbar for hiding page content behind navbar during scrolling. */}
-            < div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-white pt-[60px]" >
+            < div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-gray pt-[60px]" >
 
                 <div >
                     {/* <img
