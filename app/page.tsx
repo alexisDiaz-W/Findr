@@ -25,7 +25,7 @@ import React from 'react';
       <NavBar />
       <header className=" text-gray-500 dark:text-white max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
           <p>
-            Welcome to Findr, a place to connect in your intership experience.
+            Welcome to TEST TEST TEST, a place to connect in your intership experience.
           </p>
         </header>
 
