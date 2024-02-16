@@ -50,6 +50,7 @@ export default PricingPage
 */
 "use client"
 import NavBar from "../NavBar/navBar"
+import React from "react"
 
 export default function connect_page() {
     return (

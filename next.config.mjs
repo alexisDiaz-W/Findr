@@ -1,4 +1,30 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+// const nextConfig = {
+//     images: {
+//         remotePatterns:[
+//             {
+//                 protocol: 'https',
+//                 hostname: 'images.unplash.com',
 
-export default nextConfig;
+//             },
+           
+//         ],
+       
+//       },
+// };
+
+// export default nextConfig;
+
+
+  // next.config.mjs
+export default {
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'images.unsplash.com',
+        },
+      ],
+    },
+  };
+  

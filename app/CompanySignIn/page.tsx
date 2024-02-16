@@ -1,36 +1,52 @@
 // import { Sign } from "crypto";
 "use client"
+
 import React from "react"
+import HomeIconButton from "../HomeButton/homeButton"
 import NavBar from "../NavBar/navBar"
+// import ResponsiveHamburgerMenu from "../Hmenu";
+
 
 export default function SignIn() {
     return (
-        <>
-        
-            <NavBar />
+          <>
+         
+        {/*
+          This example requires updating your template:
   
-            {/* pt-[60px], adjust 60px of height padding to match navbar for hiding page content behind navbar during scrolling. */}
-            < div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-gray pt-[60px]" >
+          ```
+          <html class="h-full bg-white">
+          <body class="h-full">
+          ```
+        */}
+        {/* <ResponsiveHamburgerMenu /> */}
+        {/* <HomeIconButton /> */}
+        <NavBar />
 
-                <div >
+     
+        < div className = "flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8  bg-gray" >
+           
+
+                <div>
                     {/* <img
                         className="mx-auto h-10 w-auto"
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=60"
                         alt="Your Company"
                     /> */}
-                    <h2 className="gradient-text-intern  jura text-center ">Findr</h2>
-
+                    {/* gradient-text */}
+                    <h2 className="jura gradient-text-company text-8xl text-center ">Findr</h2>
+                    
                     <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                        Welcome! Sign in to your account
+                        Sign in with your organization&apos;s account
                     </h2>
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
-
+                
                     <form className="space-y-6" action="#" method="POST">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                                Email address
+                                Company Email
                             </label>
                             <div className="mt-2">
                                 <input
@@ -50,7 +66,7 @@ export default function SignIn() {
                                     Password
                                 </label>
                                 <div className="text-sm">
-                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-400">
+                                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
                                         Forgot password?
                                     </a>
                                 </div>
@@ -78,16 +94,17 @@ export default function SignIn() {
                     </form>
 
                     <p className="mt-10 text-center text-sm text-gray-500">
-                        Or {" "}
-                        <a href="/InternPage" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-400">
-                            Register Today!
+                        Not a member?{" "}
+                        <a href="/ConnectPage" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                            Start today!
                         </a>
                     </p>
-
+                    
                 </div>
-
-            </div>
-
-        </>
+                
+        </div>
+   
+     
+          </> 
     );
 }
