@@ -1,20 +1,9 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Jura } from "next/font/google";
 import "./globals.css";
 
 
 const inter = Inter({ subsets: ["latin"] });
-
-
-const jura_init = Jura({
-  subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-jura',
- 
-});
-
 
 export const metadata: Metadata = {
   title: "Findr",
@@ -28,7 +17,7 @@ export default function RootLayout({
 }>) {
   return ( 
     <html lang="en">
-      <body className={jura_init.variable}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   ); 
 }
