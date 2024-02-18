@@ -36,7 +36,7 @@ import React from 'react';
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
        
           <Link href="/PricingPage" className="hidden lg:block px-100 lg:px-100 text-center">
-            <h2 className={`mb-3 text-2xl font-semibold `}>
+            <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-100`}>
               Pricing{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 {/* -&gt; */}
@@ -48,7 +48,7 @@ import React from 'react';
           </Link>
 
           <Link href="/ConnectPage" className="hidden lg:block px-100 lg:px-100 text-center">
-            <h2 className={`mb-3 text-2xl font-semibold`}>
+            <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-100`}>
               Company Connect{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 {/* -&gt; */}
@@ -60,7 +60,7 @@ import React from 'react';
           </Link>
 
           <Link href="/InternPage" className="hidden lg:block px-100 lg:px-100 text-center">
-            <h2 className={`mb-3 text-2xl font-semibold`}>
+            <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-100`}>
               Intern Sign Up{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 {/* -&gt; */}
@@ -72,7 +72,7 @@ import React from 'react';
           </Link>
 
           <Link href="/CompanyPage" className="hidden lg:block px-100 lg:px-100 text-center">
-            <h2 className={`mb-3 text-2xl font-semibold`}>
+            <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-100`}>
               Meet the Team{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 {/* -&gt; */}

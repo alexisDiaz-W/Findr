@@ -93,3 +93,6 @@ dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-900
   bg-gray-100 opacity-100;
 }
 
+.logo_style{
+  @apply jura text-blue-600 dark:text-gray-200 relative flex place-items-center 
+}
