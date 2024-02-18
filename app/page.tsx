@@ -23,11 +23,11 @@ import React from 'react';
     <main className="text-gray-600  flex min-h-screen flex-col items-center justify-between p-24">
 
       <NavBar />
-      <header className=" text-gray-500 dark:text-white max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
-          <p>
-            Welcome to TEST TEST TEST, a place to connect in your intership experience.
-          </p>
-        </header>
+      <header className=" text-gray-500 dark:text-gray-200 max-w-9xl w-full text-center justify-center items-center jura text-2xl lg:flex">
+        <p>
+          Welcome to Findr, a place to connect in your intership experience.
+        </p>
+      </header>
 
       <div className="logo_style">
         <h1>Findr</h1>
