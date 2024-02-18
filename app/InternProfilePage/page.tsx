@@ -4,7 +4,7 @@ import React from "react";
 import NavBar from "../NavBar/navBar";
 import { PlusIcon } from '@heroicons/react/24/solid'
 import PostForm from "../PostForm/page";
-import FEED from "../FeedPage/page";
+
 
 
 
