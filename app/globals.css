@@ -54,16 +54,16 @@ body {
 
 /* In your global styles file */
 .gradient-text-intern{
-  @apply text-8xl font-bold;
-  background: linear-gradient(to bottom,transparent, #4070ff, #ffffff);
+  @apply text-8xl font-bold text-blue-600 dark:text-gray-200 ;
+  /* background: linear-gradient(to bottom,transparent, #4070ff, #ffffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 .gradient-text-company{
-  @apply text-8xl font-bold;
-  background: linear-gradient(to bottom,transparent, #ffbb00, #ffffff);
+  @apply text-8xl font-bold text-blue-600 dark:text-gray-200 ;
+  /* background: linear-gradient(to bottom,transparent, #ffbb00, #ffffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 /* In your CSS file */
 .page-background {
