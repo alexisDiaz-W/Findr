@@ -15,6 +15,11 @@ const jura_init = Jura({
  
 });
 
+export const metadata: Metadata = {
+  title: "Findr",
+  description: "Giving your interns the perfect experience.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -28,11 +33,6 @@ export default function RootLayout({
 }
 
 
-
-// export const metadata: Metadata = {
-//   title: "Findr",
-//   description: "Giving your interns the perfect experience.",
-// };
 
 // export default function RootLayout({
 //   children,
