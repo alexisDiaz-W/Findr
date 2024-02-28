@@ -43,7 +43,7 @@ const NavBar: React.FC = () => {
                         <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
                         <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link>
                         {/* Temp Post link, will replace with About. Using for building. */}
-                        <Link href="/InternProfilePage" passHref className="itemsInNavBarMenu_style">Post</Link>
+                        <Link href="/" passHref className="itemsInNavBarMenu_style">About</Link>
                         <Link href="/CompanySignIn" passHref className="itemsInNavBarMenu_style">Company Sign in</Link>
                         <Link href="/PricingPage" passHref className="itemsInNavBarMenu_style">Pricing</Link>
                         <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link>
@@ -89,7 +89,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/InternProfilePage" passHref className="itemsInDropMenu_style">About
+                            <Link href="/" passHref className="itemsInDropMenu_style">About
                             </Link>
                         </li>
                         <li>
