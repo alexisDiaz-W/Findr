@@ -100,3 +100,29 @@ dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-900
 .logo_style{
   @apply jura text-blue-600 dark:text-gray-200 relative flex place-items-center 
 }
+.profile-card {
+  width: 450px; /* Custom width */
+  height: 400px; /* Custom height */
+}
+
+/* TopBar style */
+.search-bar {
+  @apply w-full bg-gray-700 py-3 px-10 rounded-lg focus:outline-none text-gray-200 text-lg font-semibold
+}
+.search-icon {
+  @apply absolute top-8 right-2 text-gray-200 cursor-pointer hover:text-blue-400
+}
+
+/* File upload styling for /AddProfil */
+.file-input {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  z-index: -1;
+}
+.custom-file-upload {
+  @apply text-gray-200 text-center hover:text-white font-semibold px-4 py-2 border rounded-lg cursor-pointer 
+   hover:bg-gray-700 transition duration-150 ease-in-out 
+   bg-gray-600 border-none 
+}
