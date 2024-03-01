@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Add, Logout, Person, Search } from "@mui/icons-material";
 
 
-const TopBar = () => {
+const SocialSearchBar = () => {
 const [search, setSearch] = useState("");
 
   return(
@@ -26,4 +26,4 @@ const [search, setSearch] = useState("");
   );
 };
 
-export default TopBar;
+export default SocialSearchBar ;

@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import TopBar from '@/components/layout/SocialSearchBar';
+import SocialSearchBar from '@/components/layout/SocialSearchBar';
 import Link from 'next/link';
 
 interface Profile {
@@ -40,7 +40,7 @@ const Profiles: React.FC = () => {
         </Link>
         <p className='text-gray-300 text-lg font-semibold leading-3'>Leslie Alexander</p>
 
-        <TopBar />
+        <SocialSearchBar />
       </div>
 
       <hr className='border-t-2 border-white my-8 w-3/4 sm:w-1/2 md:w-2/3 lg:w-full mx-auto' />
