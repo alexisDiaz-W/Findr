@@ -14,7 +14,7 @@ const [search, setSearch] = useState("");
         <input
           type="text"
           className="search-bar"
-          placeholder="Search people, ..."
+          placeholder="Search interns, ..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
