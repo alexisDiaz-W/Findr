@@ -26,4 +26,4 @@ const [search, setSearch] = useState("");
   );
 };
 
-export default SocialSearchBar ;
+export default SocialSearchBar;

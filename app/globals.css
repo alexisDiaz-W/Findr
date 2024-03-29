@@ -107,10 +107,10 @@ dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-900
 
 /* TopBar style */
 .search-bar {
-  @apply w-full bg-gray-700 py-3 px-10 rounded-lg focus:outline-none text-gray-200 text-lg font-semibold
+  @apply w-full bg-gray-700 py-1 px-10 rounded-lg focus:outline-none text-gray-200 text-lg font-semibold
 }
 .search-icon {
-  @apply absolute top-8 right-2 text-gray-200 cursor-pointer hover:text-blue-400
+  @apply absolute top-6 right-2 text-gray-200 cursor-pointer hover:text-blue-400
 }
 
 /* File upload styling for /AddProfil */
@@ -126,3 +126,47 @@ dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-900
    hover:bg-gray-700 transition duration-150 ease-in-out 
    bg-gray-600 border-none 
 }
+.online-indicator {
+  height: 10px;
+  width: 10px;
+  background-color: #d209f1; /* Green color */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* For SocialRightSideComp, Customizes the scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+.scroll_bar::-webkit-scrollbar {
+  width: 7px; /* Width of the scrollbar */
+}
+
+.scroll_bar::-webkit-scrollbar-track {
+  @apply bg-gray-300 rounded-lg/*Color of the track */
+   
+}
+
+.scroll_bar::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 /* Color of the scrollbar thumb */
+  rounded-lg /* Optional: adds rounded corners to the scrollbar thumb */
+}
+
+.scroll_bar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Profile click pop-up animation */
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    /* A number less than 1 makes a coming out animation anything greater than 1 is coming in animation */
+    transform: scale(0.50); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.fadeInScaleUp {
+  animation: fadeInScaleUp 0.3s ease-out forwards;
+}
+
+
