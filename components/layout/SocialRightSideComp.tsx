@@ -63,7 +63,7 @@ export default function SocialRightSideComp() {
     const shuffleInterval = setInterval(() => {
       const shuffledSponsors = shuffleSponsors([...sponsors]);
       setCurrentSponsor(shuffledSponsors[0]);
-    }, 5000); // Shuffles every 10 seconds
+    }, 2000); // Shuffle time frequency in milliseconds
 
     return () => clearInterval(shuffleInterval); // Clear interval on component unmount
   }, []);

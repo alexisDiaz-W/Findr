@@ -7,7 +7,7 @@ import { interestsOptions } from '@/constants/InterestOptions'
 import SocialBottomBarComp from '@/components/layout/SocialBottomBarComp';
 
 interface Profile {
-  
+
   name: string;
   email: string;
   role: string;
@@ -49,7 +49,7 @@ const Profiles: React.FC = () => {
     }
     return text;
   };
-  
+
   useEffect(() => {
     const storedProfiles = JSON.parse(localStorage.getItem('profiles') || '[]');
     setProfiles(storedProfiles);
@@ -396,18 +396,23 @@ const Profiles: React.FC = () => {
             {/* Profile Cards */}
             <ul role="list" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4 lg:px-0 z-0">
               {filteredProfiles.map((profile, index) => (
-                <li key={index} className="bg-white shadow-xl shadow-black overflow-hidden rounded-lg sm:rounded-xl mx-auto w-[300px] h-[150px] sm:w-[200px] sm:h-[400px] md:w-[300px] lg:w-[300px] xl:w-[300px]">
-                  <div className="flex sm:flex-col items-start sm:items-center p-1 space-y-0 ">
-                    <Image
-                      width={150}
-                      height={50}
-                      className=" w-20 sm:w-40 hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50 rounded-md sm:rounded-xl duration-300 relative square sm:mt-10 mt-0 mr-3 overflow-hidden mb-2 cursor-pointer"
-                      src={profile.imageUrl}
-                      alt={profile.name}
-                      onClick={() => handleProfileClick(profile)}
-                    />
 
-                    <div className="space-y-0.5 sm:text-sm text-left sm:text-center">
+                <li key={index} className="bg-white shadow-xl shadow-black overflow-hidden rounded-lg sm:rounded-xl mx-auto w-[300px] h-[320px] sm:w-[200px] sm:h-[400px] md:w-[300px] lg:w-[300px] xl:w-[300px]">
+                  <div className="flex flex-col items-center p-4 space-y-4">
+                    {/* <div className="flex sm:flex-col items-start sm:items-center p-1 space-y-0 "> */}
+
+                    <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-md overflow-hidden">
+                      <Image
+                        layout="fill"
+                        objectFit="cover"
+                        src={profile.imageUrl}
+                        alt={profile.name}
+                        onClick={() => handleProfileClick(profile)}
+                        className="object-cover rounded-md hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50  sm:rounded-xl duration-300 relative square mr-3 overflow-hidden cursor-pointer"
+                      />
+                    </div>
+                
+                    <div className="space-y-0.5 sm:text-sm text-center">
                       <p className="text-xl font-medium leading-6 text-black">
                         {profile.name}
                       </p>
@@ -422,12 +427,12 @@ const Profiles: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex mt-1 border-t-2 border-gray-100 w-full text-center">
-                    <a href={`mailto:${profile.email}`} className="flex-1 py-3 sm:py-4 text-md font-medium text-gray-600 hover:bg-gray-100 hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50 rounded-xl duration-300">
+                  <div className="flex  border-t-2 border-gray-100 w-full text-center">
+                    <a href={`mailto:${profile.email}`} className="flex-1 py-6 sm:py-6 text-md font-medium text-gray-600 hover:bg-gray-100 hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50 rounded-xl duration-300">
                       Email
                     </a>
                     <div className="border-l-2 border-gray-100"></div>
-                    <button className="flex-1 py-3 sm:py-4 text-md font-medium text-gray-600 hover:bg-gray-100 hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50 rounded-xl duration-300">
+                    <button className="flex-1 py-6 sm:py-4 text-md font-medium text-gray-600 hover:bg-gray-100 hover:-translate-y-1 hover:scale-110 focus:outline-none transition ease-in-out delay-50 rounded-xl duration-300">
                       Message
                     </button>
                   </div>
