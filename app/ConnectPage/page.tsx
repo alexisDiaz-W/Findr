@@ -51,6 +51,7 @@ export default PricingPage
 "use client"
 import NavBar from "../NavBar/navBar"
 import React from "react"
+import Link from "next/link"; // Import Link from Next.js
 
 export default function connect_page() {
     return (
@@ -99,7 +100,7 @@ export default function connect_page() {
                 </div>
               </div>
   
-              <div className="col-span-full">
+              <div className="col-span-full flex flex-col items-center ">
                 <label htmlFor="photo" className="block text-sm font-medium leading-6 text-gray-900">
                   Company Logo
                 </label>
@@ -107,8 +108,7 @@ export default function connect_page() {
                   <button
                     type="button"
                     className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                  >
-                    Change
+                  >Change
                   </button>
                 </div>
               </div>
@@ -270,12 +270,12 @@ export default function connect_page() {
           <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
             Cancel
           </button>
-          <button
-            type="submit"
-            className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Save
-          </button>
+          {/* Wrap the button-like element with Link */}
+          <Link href="/CompanySocial" passHref className="inline-block">
+              <h1 className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 inline-flex items-center justify-center">
+                 Save
+              </h1>
+          </Link>
         </div>
       </form>
     )
