@@ -58,6 +58,7 @@ export default function connect_page() {
       
       <form className="flex flex-col justify-center items-center ">
         <NavBar />
+        /* the white backdrop */
         <div className="w-full max-w-6xl p-6 pt-20 space-y-8 bg-white border border-gray-300 rounded-lg shadow-md">
         <div className="text-center">
             <h2 className="text-base font-semibold leading-7 text-gray-900">Company Profile</h2>
