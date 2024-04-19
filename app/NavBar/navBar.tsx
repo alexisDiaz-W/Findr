@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { VscAccount } from "react-icons/vsc";
-
-
+import { UserButton } from '@clerk/nextjs';
+import { dark } from '@clerk/themes';
 
 const NavBar: React.FC = () => {
     // State to manage the hamburger menu's visibility
@@ -40,24 +40,26 @@ const NavBar: React.FC = () => {
                     {/* Centered nav links for larger screens */}
                     {/* Navigation bar menu contents */}
                     <div className="hidden lg:flex justify-around items-center flex-grow">
-                        <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
+                        {/* temporarily removing SignIn link  */}
+                        <Link href="/sign-in" passHref className="itemsInNavBarMenu_style">Sign in</Link>
                         <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link>
                         {/* Temp Post link, will replace with About. Using for building. */}
-                        <Link href="/InternProfilePage" passHref className="itemsInNavBarMenu_style">Post</Link>
+                        <Link href="/About" passHref className="itemsInNavBarMenu_style">About</Link>
                         <Link href="/CompanySignIn" passHref className="itemsInNavBarMenu_style">Company Sign in</Link>
                         <Link href="/PricingPage" passHref className="itemsInNavBarMenu_style">Pricing</Link>
                         <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link>
                         <Link href="/CompanyPage" passHref className="itemsInNavBarMenu_style">Meet the Team</Link>
-                        <Link href="#" passHref className="itemsInNavBarMenu_style">Sign out</Link>
+                        {/* <Link href="#" passHref className="itemsInNavBarMenu_style">Sign out</Link> */}
                         {/* Add links */}
                     </div>
 
                     {/* Right-aligned section for larger screens, if needed */}
                     {/* Get Started button*/}
                     <div className=" md:flex justify-end items-center">
-                        <Link href="/SignIn">
+                        {/* <Link href="/SignIn">
                             <button type="button" className=" text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 m-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Get started</button>
-                        </Link>
+                        </Link> */}
+                        <UserButton appearance={{ baseTheme: dark }} afterSignOutUrl="/sign-in" />
 
                     </div>
 
@@ -80,7 +82,8 @@ const NavBar: React.FC = () => {
                     {/* Drop down menu contents */}
                     <ul className="itemsInDropDownMenu_style ">
                         <li>
-                            <Link href="/SignIn" passHref className="itemsInDropMenu_style">Sign in
+                            {/* temporarily removing SignIn link  */}
+                            <Link href="/sign-in" passHref className="itemsInDropMenu_style">Sign in
                             </Link>
                         </li>
 
@@ -89,7 +92,7 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/InternProfilePage" passHref className="itemsInDropMenu_style">About
+                            <Link href="/About" passHref className="itemsInDropMenu_style">About
                             </Link>
                         </li>
                         <li>
@@ -109,10 +112,10 @@ const NavBar: React.FC = () => {
                             <Link href="/CompanyPage" passHref className="itemsInDropMenu_style">Meet the Team
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="#" passHref className="itemsInDropMenu_style">Sign out
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
