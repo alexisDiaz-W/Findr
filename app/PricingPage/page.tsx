@@ -7,7 +7,7 @@ const includedFeatures = [
   'Entry to annual conference',
   'Official member t-shirt',
 ]
-import NavBar from "../NavBar/navBar"
+import NavBar from "../../components/NavBar/navBar"
 
 import React from 'react';
 

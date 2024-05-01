@@ -1,40 +1,5 @@
-/*
-
-import React from "react"
-
-const PricingPage = () => {
-    return (
-        <div>Congratulations on the new internship, Lets start making your experience perfect:
-            <h2>Name: </h2>
-            <h2>Company: </h2>
-            <h2>City: </h2>
-            <h2>Kansas: </h2>
-        </div>
-    )
-}
-
-export default PricingPage
-
-
-
-*/
-
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
 "use client"
-import NavBar from "../NavBar/navBar"
+import NavBar from "../../components/NavBar/navBar"
 
 export default function Example() {
   return (

@@ -1,7 +1,7 @@
 // import { Sign } from "crypto";
 "use client"
 import React from "react"
-import NavBar from "../NavBar/navBar"
+import NavBar from "../../components/NavBar/navBar"
 
 export default function SignIn() {
     return (

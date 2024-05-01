@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 h1 {
-  font-size: 150px;
+  font-size: 99px;
 }
 
 :root {

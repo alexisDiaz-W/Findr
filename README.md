@@ -34,3 +34,61 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Install Dependancies
+
+Design Libraries:
+
+npm install @cloudscape-design/components
+npm install @cloudscape-design/global-styles
+
+Forms:
+npm install react-hook-form
+
+npm install axios
+
+
+## AWS DynamoDB Schema
+
+Partition Key: PK (String)
+Sort Key: SK (String)
+
+Attributes:
+    Type: String ("Company" or "User")
+    CompanyName: String (for companies)
+    FirstName: String (for users)
+    LastName: String (for users)
+    Password: String (for users)
+    CompanyID: String (for users, to reference their employer)
+    Address: String
+    Email: String
+
+Secondary Index:
+    Global Secondary Index (GSI) for alternative query patterns:
+    GSI1PK (GSI Partition Key): Email - Allows querying by email address.
+    GSI1SK (GSI Sort Key): Type - Helps filter by entity type (user or company).
+
+## AWS Lambda: Company Sign Up Information: "findr-testLambda"
+
+Expected JSON:
+
+{
+  "companyID": "1234",
+  "companyName": "Findr",
+  "email": "findr@gmail.com",
+  "address": "123 Street Kansas"
+}
+
+## AWS LAMBDA: User Sign Up Information: "Findr-CreateUser"
+
+Expected JSON:
+
+{
+  "companyID": "1234",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "address": "456 Elm Street, Springfield",
+  "password": "securePassword123"  // Note: Work on hashing...
+}
+
