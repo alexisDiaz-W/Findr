@@ -41,7 +41,7 @@ const people = [
     isOnline: false, //Changes online status
   },
   {
-    name: 'Jacobo Navarrete',
+    name: 'Jacobo',
     email: 'dries.vincent@example.com',
     role: 'Business Relations',
     imageUrl:
@@ -50,15 +50,11 @@ const people = [
     isOnline: false, //Changes online status
   },
 ]
-//   < p className = {`text-sm font-semibold leading-6 ${people.isOnline ? 'text-indigo-600' : 'text-gray-600'}`}>
-//     { profile.isOnline && <span className="online-indicator"></span> }
-// { " " }
-// { profile.isOnline ? "Online" : "Offline" }
-//                     </p >
+
 
 export default function Example() {
   return (
-    <div className="flex flex-col min-h-screen page-background py-24 sm:py-32">
+    <div className="page-background py-24 sm:py-32">
       <NavBar />
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
@@ -82,11 +78,7 @@ export default function Example() {
                 />
                 <div className="mt-1 flex items-center gap-x-1.5">
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                  <p className= {`text-sm font-semibold leading-6 ${person.isOnline ? 'text-indigo-600' : 'text-gray-600'}`}>
-                    { person.isOnline && <span className="online-indicator"></span> }
-                    { " " }
-                    { person.isOnline ? "Online" : "Offline" }
-                  </p>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">{person.isOnline ? "Online" : "Offline"}</p>
                 </div>
                 <div>
                   <p className="text-xs leading-5 text-gray-500"></p>
