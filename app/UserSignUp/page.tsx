@@ -13,6 +13,7 @@ type FormData = {
   address: string;
   password: string;
 };
+
 const SignUpForm: React.FC = () => {
     const {
       register,
