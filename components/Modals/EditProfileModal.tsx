@@ -64,7 +64,7 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
     const [selectedBackgroundImageName, setSelectedBackgroundImageName] = useState('');
     const [formSubmittedSuccessfully, setFormSubmittedSuccessfully] = useState(false);
 
-    
+
     // NEW!!
     // Use the Profile interface for the profile parameter
     const saveProfileToLocal = (profile: Profile) => {
@@ -134,8 +134,8 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
         }
     }, [user]);
 
-  
-    
+
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setNewProfile(prevState => ({
@@ -144,7 +144,7 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
         }));
     };
 
-   
+
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
@@ -169,7 +169,7 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
         setTimeout(() => setSubmissionMessage(''), 5000);
     };
 
-    
+
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'profile' | 'background') => {
         if (e.target.files && e.target.files[0]) {
@@ -254,9 +254,10 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
                     {/* Interests checklist */}
                     {/* Add more details pop-up window */}
                     {isDetailsModalOpen && (
-                        <div className="z-50 fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center px-4 py-6 sm:px-6  overflow-auto" onClick={() => setIsDetailsModalOpen(false)}>
-                            <div className=" bg-white p-2 sm:p-6 rounded-lg shadow-lg max-w-md sm:max-w-2xl w-full space-y-4 overflow-hidden" style={{ maxHeight: "80vh" }} onClick={(e) => e.stopPropagation()}>
-                                {/* Close button */}
+                        <div className="z-50 fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center px-4 py-6 sm:px-6 overflow-auto" onClick={() => setIsDetailsModalOpen(false)}>
+                            <div className="relative bg-white p-2 sm:p-6 rounded-lg shadow-lg max-w-md sm:max-w-2xl w-full space-y-4 overflow-auto"
+                                style={{ maxHeight: "80vh", paddingTop: "3rem" }} // Added paddingTop here
+                                onClick={(e) => e.stopPropagation()}>                                {/* Close button */}
                                 <button onClick={() => setIsDetailsModalOpen(false)} className="absolute top-0 right-0 mt-4 mr-4" aria-label="Close">
                                     <svg className="w-6 h-6 text-gray-500 hover:text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -266,7 +267,7 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
                                 <textarea
                                     name="introduction"
                                     placeholder="Introduce yourself..."
-                                    className="text-black w-full p-4 border rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                                    className="text-black w-full p-4 border rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8" // Added mt-8 (margin-top) here
                                     value={newProfile.introduction || ''} // Use newProfile.introduction as the source of truth
                                     onChange={handleChange} // Use the updated handleChange for both input and textarea
                                     maxLength={500} // Optional: Limit introduction text length
@@ -396,11 +397,11 @@ const EditProfileModal: React.FC<EditProfileModalProps> = ({ isOpen, onClose }) 
                     )}
 
                     {/* Submit button and link to profiles */}
-                   
+
                     <button type="submit" className="px-4 py-2 mt-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-150 ease-in-out">
                         Confirm Changes
                     </button>
-                    
+
 
                     {submissionMessage && (
                         <div className={`mt-4 px-4 py-3 rounded relative ${submissionMessageType === 'success' ? 'bg-green-100 border-t border-green-400 text-green-700' : 'bg-red-100 border-t border-red-400 text-red-700'}`} role="alert">

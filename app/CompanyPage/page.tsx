@@ -25,7 +25,7 @@ const people = [
     email: 'alexdiaz10129@gmail.com',
     role: 'Co-Founder / CEO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      '/assets/Alex2.jpeg',
     lastSeen: '3h ago',
     lastSeenDateTime: '2023-01-23T13:23Z',
     isOnline: true, //Changes online status
@@ -35,7 +35,7 @@ const people = [
     email: 'michael.foster@example.com',
     role: 'Co-Founder / CTO',
     imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      '/assets/Manuel.jpeg',
     lastSeen: '3h ago',
     lastSeenDateTime: '2023-01-23T13:23Z',
     isOnline: false, //Changes online status

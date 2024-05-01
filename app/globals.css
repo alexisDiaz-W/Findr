@@ -169,4 +169,37 @@ dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-900
   animation: fadeInScaleUp 0.3s ease-out forwards;
 }
 
+.notification-popup {
+  color: black;
+  position: fixed; /* or absolute */
+  top: 10%; /* adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white; /* ensure it contrasts with the background */
+  border: 1px solid black; /* make it visible */
+  z-index: 1000; /* ensure it's on top */
+  padding: 20px;
+  width: 400px; /* adjust as necessary */
+  height: 400px;
+}
+/* Add to your global CSS file or within a <style> tag in your React component */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%); /* Start from below the visible area */
+  }
+  to {
+    transform: translateY(0); /* End at the natural position */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0); /* Start from the natural position */
+  }
+  to {
+    transform: translateY(100%); /* End below the visible area */
+  }
+}
+
 

@@ -17,6 +17,12 @@ interface Sponsor {
   description: string;
 }
 
+// Define an interface for the props expected by SocialRightSideComp, including the onSearchChange handler
+interface SocialRightSideCompProps {
+  onSearchChange: (searchTerm: string) => void;
+}
+
+
 const sponsors = [
   {
     imageUrl: "/assets/apt1.png",
@@ -43,51 +49,66 @@ const sponsors = [
     title: "Parc at 21st and Rock",
     description: "Parc at 21st & Rock is a one- and two-bedroom apartment community conveniently located minutes from downtown Wichita, KS.Our community features completely remodeled living spaces along with a variety of desired features and amenities. Enjoy our sparkling pool, community playground, with easy access to hiking and bike trails."
   },
+  {
+    imageUrl: "/assets/R1.png",
+    alt: "ad",
+    title: "Las Rosas",
+    description: "Las Rosas Wichita Mexican Grill, located at 1050 W 47th St S is a locally owened authentic taste of Mexican food serving a variety of delicacies!"
+  },
+  {
+    imageUrl: "/assets/R2.png",
+    alt: "ad",
+    title: "Country Cafe",
+    description: "We live the restaurant lifestyle with over 25+ years of experience in the industry. We strive to give every customer an excellent dining experience. We are a family ran restaurant with our values rooted in the concept of giving the atmosphere of the restaurant a family vibe. We hope you enjoy your visit with us as much as we enjoy serving our customers! Thank you for being a part of our journey!"
+  },
 ];
 
 
 
-export default function SocialRightSideComp() {
+export default function SocialRightSideComp({ onSearchChange }: SocialRightSideCompProps) {
   const { isLoaded, isSignedIn, user } = useUser();
-  const [currentSponsor, setCurrentSponsor] = useState<Sponsor | null>(null);
+  // const [currentSponsor, setCurrentSponsor] = useState<Sponsor | null>(null);
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
   const toggleEditProfileModal = () => setIsEditProfileModalOpen(!isEditProfileModalOpen);
+  const [currentSponsorIndex, setCurrentSponsorIndex] = useState(0); // Use an index instead of a sponsor object
 
+
+  // useEffect(() => {
+  //   const shuffledSponsors = shuffleSponsors([...sponsors]);
+  //   setCurrentSponsor(shuffledSponsors[0]);
+  // }, []);
 
   useEffect(() => {
-    const shuffledSponsors = shuffleSponsors([...sponsors]);
-    setCurrentSponsor(shuffledSponsors[0]);
-  }, []);
+    const interval = setInterval(() => {
+      setCurrentSponsorIndex(prevIndex => (prevIndex + 1) % sponsors.length); // Cycle through sponsors
+    }, 5000); // Change sponsor every 4 seconds
 
-  useEffect(() => {
-    const shuffleInterval = setInterval(() => {
-      const shuffledSponsors = shuffleSponsors([...sponsors]);
-      setCurrentSponsor(shuffledSponsors[0]);
-    }, 2000); // Shuffle time frequency in milliseconds
-
-    return () => clearInterval(shuffleInterval); // Clear interval on component unmount
+    return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
 
   // Function to shuffle sponsors array with explicit typing
-  const shuffleSponsors = (array: Sponsor[]): Sponsor[] => {
-    let currentIndex = array.length, randomIndex;
+  // const shuffleSponsors = (array: Sponsor[]): Sponsor[] => {
+  //   let currentIndex = array.length, randomIndex;
 
-    while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
+  //   while (currentIndex !== 0) {
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
+  //     [array[currentIndex], array[randomIndex]] = [
+  //       array[randomIndex], array[currentIndex]];
+  //   }
 
-    return array;
+  //   return array;
+  // }
+
+
+
+  if (!isLoaded || !isSignedIn || sponsors.length === 0) {
+    return null; // Ensure sponsors are loaded and user is signed in
   }
 
+  const currentSponsor = sponsors[currentSponsorIndex]; // Get current sponsor based on index
 
-
-  if (!isLoaded || !isSignedIn || !currentSponsor) {
-    return null;
-  }
 
   // if (!isLoaded || !isSignedIn) {
   //   return null;
@@ -113,7 +134,7 @@ export default function SocialRightSideComp() {
         </Link>
         <p className='text-gray-300 text-lg font-semibold leading-3'>{user.firstName}{" "}{user.lastName} </p>
 
-        <SocialSearchBar />
+        <SocialSearchBar onSearchChange={onSearchChange} />
       </div>
 
       <hr className='border-t-2 border-blue-300 my-4 w-3/4 mx-auto' />
@@ -121,11 +142,9 @@ export default function SocialRightSideComp() {
       {/* Sponsor section */}
       <div className="grid w-[280px] mx-auto overflow-auto h-[400px] px-2 scroll_bar">
         <h3 className="text-white text-3xl font-bold leading-2 mb-3">Sponsored</h3>
-        <Image src={currentSponsor.imageUrl} alt={currentSponsor.alt} width={280} height={200} className=" rounded-lg mb-2" />
+        <Image src={currentSponsor.imageUrl} alt={currentSponsor.alt} width={280} height={200} className="rounded-lg mb-2" />
         <p className="font-bold text-xl text-white leading-6">{currentSponsor.title}</p>
-        <p className="text-sm text-gray-200 leading-6">
-          {currentSponsor.description}
-        </p>
+        <p className="text-sm text-gray-200 leading-6">{currentSponsor.description}</p>
       </div>
 
       <div className='flex-grow'>

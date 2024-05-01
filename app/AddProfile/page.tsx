@@ -255,7 +255,7 @@ export default function AddProfile() {
                 {/* Add more details pop-up window */}
                 {isDetailsModalOpen && (
                     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center px-4 py-6 sm:px-0 z-50 overflow-auto" onClick={() => setIsDetailsModalOpen(false)}>
-                        <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full space-y-4 overflow-hidden" style={{ maxHeight: "80vh" }} onClick={(e) => e.stopPropagation()} ref={modalContentRef}>
+                        <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full space-y-4 overflow-auto" style={{ maxHeight: "80vh" }} onClick={(e) => e.stopPropagation()} ref={modalContentRef}>
                             {/* Close button */}
                             <button onClick={() => setIsDetailsModalOpen(false)} className="absolute top-0 right-0 mt-4 mr-4" aria-label="Close">
                                 <svg className="w-6 h-6 text-gray-500 hover:text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

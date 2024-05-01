@@ -43,7 +43,7 @@ export default function Home() {
           </p>
         </Link>
 
-        <Link href="/InternPage" className="hidden lg:block px-100 lg:px-100 text-center">
+        <Link href="/sign-up" className="hidden lg:block px-100 lg:px-100 text-center">
           <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-400`}>
             Intern Sign Up{" "}
           </h2>

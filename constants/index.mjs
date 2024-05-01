@@ -1,3 +1,5 @@
+// This component provides functionality to SocialBottomComp.tsx 
+// Provides icons and what their fucntion is when pressed
 import {
     Home,
     AddPhotoAlternateOutlined,
@@ -7,9 +9,21 @@ import {
     ManageAccountsRounded,
     ManageAccountsOutlined,
     PersonSearch,
+    MarkChatUnread,
+    Announcement,
+    CircleNotificationsOutlined,
+    NotificationsOutlined,
+    MarkChatRead,
+    MarkUnreadChatAltOutlined,
   } from "@mui/icons-material";
+  import SearchProfileModal from "@/components/Modals/SearchProfileModal";
+  import { useNotifications } from '@/contexts/NotificatonContext';
+
+  
   
   export const sidebarLinks = [
+  
+
     {
       icon: <Home sx={{ color: "white", fontSize: "26px" }} />,
       route: "/Profiles",
@@ -18,7 +32,7 @@ import {
     },
     {
       icon: <PersonSearch sx={{ color: "white", fontSize: "26px" }} />,
-      route: "/",
+      route: "./components/Modals/SearchProfileModal.tsx",
       label: "Search",
       description: "Search Intern",
     },
@@ -28,18 +42,20 @@ import {
     //   route: "/people",
     //   label: "People",
     // },
-    // {
-    //   icon: <BookmarksOutlined sx={{ color: "white", fontSize: "26px" }} />,
-    //   route: "/saved-posts",
-    //   label: "Saved Posts",
-    // },
     {
       icon: <ManageAccountsOutlined sx={{ color: "white", fontSize: "26px" }} />,
       route: "./components/Modals/EditProfileModal.tsx",
       label: "Manage",
       description: "Manage/Confirm Changes",
     
+     },
+    {
+      
+      icon: <MarkUnreadChatAltOutlined sx={{ color: "white", fontSize: "26px" }} />,
+      route: "/Users/manuelllamas-mancinas/Desktop/Findr/components/Modals/NotificationsModal.tsx",
+      label: "Notifications",
     },
+    
   ];
   
   export const pageTitles = [
