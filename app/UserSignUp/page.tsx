@@ -55,7 +55,7 @@ const SignUpForm: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Link href="/" passHref>
-        <h4 className="dark:text-blue-500 jura text-4xl text-black cursor-pointer ml-40 mt-4">Fr</h4>
+        <h4 className="dark:text-blue-500 jura text-4xl text-black cursor-pointer ml-4 mt-4">Fr</h4>
       </Link>
       <hr className="border-t-2 border-blue-900 my-4 w-full" />
 
