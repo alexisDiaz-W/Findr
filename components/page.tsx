@@ -37,7 +37,7 @@ const CompanyDropdown: React.FC<CompanyDropdownProps> = ({ onChange }) => {
         <div className="text-black relative w-64 mx-auto">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex justify-between items-center w-full p-2 text-left text-base border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+                className="font-semibold flex justify-between items-center w-full p-2 text-left text-base border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
             >
                 {selectedCompany || 'Select your company'}
                 <svg className="w-4 h-4 text-gray-500" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
