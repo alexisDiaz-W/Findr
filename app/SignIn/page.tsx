@@ -79,8 +79,8 @@ export default function SignIn() {
 
                     <p className="mt-10 text-center text-sm text-gray-500">
                         Or {" "}
-                        <a href="/InternPage" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-400">
-                            Register Today!
+                        <a href="/UserSignUp" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-400">
+                            Sign Up Today!
                         </a>
                     </p>
 

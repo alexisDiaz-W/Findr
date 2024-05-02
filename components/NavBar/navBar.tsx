@@ -37,21 +37,21 @@ const NavBar: React.FC = () => {
                     {/* Navigation bar menu contents */}
                     <div className="hidden lg:flex justify-around items-center flex-grow">
                         <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
-                        <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link>
+                        {/* <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link> */}
                         {/* Temp Post link, will replace with About. Using for building. */}
                         
                         <Link href="/CompanySignIn" passHref className="itemsInNavBarMenu_style">Company Sign in</Link>
-                        <Link href="/PricingPage" passHref className="itemsInNavBarMenu_style">Pricing</Link>
-                        <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link>
-                        <Link href="/CompanyPage" passHref className="itemsInNavBarMenu_style">Meet the Team</Link>
-                        <Link href="#" passHref className="itemsInNavBarMenu_style">Sign out</Link>
+                        <Link href="/About" passHref className="itemsInNavBarMenu_style">About</Link>
+                        {/* <Link href="#" passHref className="itemsInNavBarMenu_style">Contact</Link> */}
+                        {/* <Link href="/CompanyPage" passHref className="itemsInNavBarMenu_style">Meet the Team</Link> */}
+                        {/* <Link href="#" passHref className="itemsInNavBarMenu_style">Sign out</Link> */}
                         {/* Add links */}
                     </div>
 
                     {/* Right-aligned section for larger screens, if needed */}
                     {/* Get Started button*/}
                     <div className=" md:flex justify-end items-center">
-                        <Link href="/SignIn">
+                        <Link href="/UserSignUp">
                             <button type="button" className=" text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-3 m-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Get started</button>
                         </Link>
 
@@ -80,12 +80,12 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
 
-                        <li>
+                        {/* <li>
                             <Link href="/" className="itemsInDropMenu_style">Home
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
-                            <Link href="/InternProfilePage" passHref className="itemsInDropMenu_style">About
+                            <Link href="/About" passHref className="itemsInDropMenu_style">About
                             </Link>
                         </li>
                         <li>
@@ -97,18 +97,18 @@ const NavBar: React.FC = () => {
                             <Link href="/PricingPage" passHref className="itemsInDropMenu_style">Pricing
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="#" passHref className="itemsInDropMenu_style">Contact
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href="/CompanyPage" passHref className="itemsInDropMenu_style">Meet the Team
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="#" passHref className="itemsInDropMenu_style">Sign out
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

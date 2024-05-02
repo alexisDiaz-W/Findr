@@ -37,7 +37,7 @@ const people = [
 
 export default function Example() {
   return (
-    <div className="page-background py-24 sm:py-32">
+    <div className="min-h-screen page-background py-24 sm:py-32">
       <NavBar />
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
