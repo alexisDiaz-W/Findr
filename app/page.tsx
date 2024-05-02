@@ -21,7 +21,7 @@ export default function Home() {
         <h1>Findr</h1>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
         <Link
           href="/PricingPage"
           className="hidden lg:block px-100 lg:px-100 text-center"
