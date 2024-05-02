@@ -1,13 +1,7 @@
 'use client'
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import axios, { AxiosError } from 'axios';
-import Link from 'next/link';
-
-interface FormData {
-    email: string;
-    password: string;
-}
+import axios from 'axios';
 
 const SignInForm: React.FC = () => {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
@@ -15,12 +9,10 @@ const SignInForm: React.FC = () => {
     const onSubmit = async (data: FormData) => {
         try {
             const response = await axios.post('https://bsrwoinpyj.execute-api.us-east-2.amazonaws.com/dev/Findr-UserData/Findr-User-Auth', data);
-            const responseBody = JSON.parse(response.data.body);
-
-            // Check the message that is returned inside the response body
-            if (responseBody.message === 'Login successful') {
-                alert('Login successful!');
-            } else if (responseBody.statusCode === 'Unauthorized') {
+            console.log(response.data); // Handle response based on your API logic
+            alert('Login successful!');
+        } catch (error) {
+            if (error.response && error.response.status === 401) {
                 alert('Invalid credentials');
             } else if (responseBody.message === 'User not found') {
                 alert("User not found. Try Again.");
