@@ -12,7 +12,7 @@ export default function Home() {
       </header>
 
       <div className="logo_style">
-        <h1>Findr</h1>
+        <p>Findr</p>
       </div>
 
       <div className="mb-32 grid grid-cols-1 gap-10 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
