@@ -1,10 +1,10 @@
 "use client";
-// src/components/SignUpForm.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import CompanyDropdown from '../../components/page';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Correct import statement for useRouter
 
 type FormData = {
   firstName: string;
@@ -15,26 +15,32 @@ type FormData = {
 };
 
 const SignUpForm: React.FC = () => {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue
   } = useForm<FormData>();
 
   const [companyID, setCompanyID] = useState("");
+  const [companyError, setCompanyError] = useState(""); // State to manage company selection error
 
   const onSubmit = handleSubmit(async (data) => {
-    const fullData = { ...data, companyID };
-    console.log(fullData); // You can see what's being sent in the console
+    if (!companyID) {
+      setCompanyError("Selecting a company is required."); // Set error if company not selected
+      return; // Prevent form submission
+    }
 
+    const fullData = { ...data, companyID };
     try {
       const response = await axios.post(
         "https://bsrwoinpyj.execute-api.us-east-2.amazonaws.com/dev/Findr-UserData",
         fullData
       );
       alert("User registered successfully!");
-      console.log(response.data); // Log the response from the server
+      setTimeout(() => {
+        router.push('/SignIn');
+      }, 1000);
     } catch (error) {
       console.error("Error registering user:", error);
       alert("Error registering user.");
@@ -42,29 +48,24 @@ const SignUpForm: React.FC = () => {
   });
 
   const handleCompanyChange = (id: string | null) => {
-    if (id === null) {
-      setCompanyID(""); // Handle the null case by setting the company ID to an empty string
-    } else {
-      setCompanyID(id);
-    }
-    // setValue("companyID", id); // Uncomment if you need to update the form state as well
+    setCompanyID(id || "");
+    setCompanyError(""); // Clear error when a company is selected
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
-      <div className="">
-        <Link href="/" passHref>
-          <h4 className="dark:text-blue-500 jura text-4xl text-black cursor-pointer ml-40 mt-4">Fr</h4>
-        </Link>
-      </div>
+      <Link href="/" passHref>
+        <h4 className="dark:text-blue-500 jura text-4xl text-black cursor-pointer ml-40 mt-4">Fr</h4>
+      </Link>
       <hr className="border-t-2 border-blue-900 my-4 w-full" />
 
       <form className="flex flex-col items-center justify-center p-8 grow text-black" onSubmit={onSubmit}>
         <h3 className="text-2xl font-bold text-indigo-600 mb-8">Intern Sign Up</h3>
         <CompanyDropdown onChange={handleCompanyChange} />
+        {companyError && <span className="text-red-500 text-sm">{companyError}</span>} {/* Display company error here */}
+        {/* Input fields and registration button here */}
         <div className="w-full max-w-md space-y-4 mt-5">
-          {/* Input fields and registration button here */}
-          <div className="form-control">
+        <div className="form-control">
             <input {...register("firstName", { required: true })} placeholder="First Name"
               className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
             {errors.firstName && <span className="text-red-500 text-sm">This field is required</span>}
@@ -100,11 +101,10 @@ const SignUpForm: React.FC = () => {
               className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
             {errors.password && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
-
-          <button type="submit"
-            className="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
-            Register
-          </button>
+        <button type="submit"
+          className="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
+          Register
+        </button>
         </div>
       </form>
     </div>
