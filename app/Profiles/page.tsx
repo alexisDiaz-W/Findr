@@ -37,7 +37,7 @@ const Profiles: React.FC = () => {
   const [isDropdownStatusOpen, setIsDropdownStatusOpen,] = useState(false);
   const [currentStatus, setCurrentStatus] = useState('Filter by Roommate Ready');
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false); // state to manage the visibility of the modal for selectable interest 
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false); // state to manage the visibi````lity of the modal for selectable interest 
   const [filterGender, setFilterGender] = useState<string | null>(null); // null indicates no filter
   const [isDropdownGenderOpen, setIsDropdownGenderOpen] = useState(false);
   // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
