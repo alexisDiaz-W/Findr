@@ -36,7 +36,7 @@ const NavBar: React.FC = () => {
                     {/* Centered nav links for larger screens */}
                     {/* Navigation bar menu contents */}
                     <div className="hidden lg:flex justify-around items-center flex-grow">
-                        <Link href="/SignIn" passHref className="itemsInNavBarMenu_style">Sign in</Link>
+                        <Link href="/InternSignInPage" passHref className="itemsInNavBarMenu_style">Sign in</Link>
                         {/* <Link href="/" passHref className="itemsInNavBarMenu_style">Home</Link> */}
                         {/* Temp Post link, will replace with About. Using for building. */}
                         
@@ -76,7 +76,7 @@ const NavBar: React.FC = () => {
                     {/* Drop down menu contents */}
                     <ul className="itemsInDropDownMenu_style ">
                         <li>
-                            <Link href="/SignIn" passHref className="itemsInDropMenu_style">Sign in
+                            <Link href="/InternSignInPage" passHref className="itemsInDropMenu_style">Sign in
                             </Link>
                         </li>
 

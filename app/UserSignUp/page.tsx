@@ -39,7 +39,7 @@ const SignUpForm: React.FC = () => {
       );
       alert("User registered successfully!");
       setTimeout(() => {
-        router.push('/SignIn');
+        router.push('/InternSignInPage');
       }, 1000);
     } catch (error) {
       console.error("Error registering user:", error);
