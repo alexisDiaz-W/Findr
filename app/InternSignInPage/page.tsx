@@ -50,38 +50,40 @@ const SignInForm: React.FC = () => {
                     <hr className="border-t-2 border-blue-900 my-0" />
                 </div>
                 <div className="flex grow items-center justify-center">
-                    <div className="p-8 space-y-6 rounded-lg shadow-2xl bg-white">
-                        <h1 className="text-2xl font-bold text-center text-gray-900">Intern Sign In</h1>
-                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    <div className="p-8 space-y-8 rounded-lg shadow-2xl bg-white">
+                        <h1 className="text-3xl font-bold text-center text-gray-900 mb-10">Intern Sign In</h1>
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700"></label>
                                 <input
                                     id="email"
                                     {...register("email", { required: "Email is required" })}
                                     placeholder="Email"
                                     type="email"
-                                    className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-50"
+                                    className="block w-80 px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-50"
                                 />
                                 {errors.email && <p className="text-xs text-red-600">{errors.email.message}</p>}
                             </div>
 
                             <div>
-                                <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+                                <label htmlFor="password" className="block text-sm font-medium text-gray-700"></label>
                                 <input
                                     id="password"
                                     {...register("password", { required: "Password is required" })}
                                     placeholder="Password"
                                     type="password"
-                                    className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-50"
+                                    className="block w-80 px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:ring-blue-500 focus:outline-none focus:ring focus:ring-opacity-50"
                                 />
                                 {errors.password && <p className="text-xs text-red-600">{errors.password.message}</p>}
                             </div>
-                            <Link href="/UserSignUp" passHref className="text-blue-500 hover:text-blue-700 text-center block">Sign Up
-                            </Link>
+                            <div className="text-center">
+                                <Link href="/UserSignUp" passHref className="text-blue-500 hover:text-blue-800 inline-block mx-auto">
+                                    Sign Up
+                                </Link>
+                            </div>
                             <button type="submit" className="w-full px-4 py-2 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
                                 Sign In
                             </button>
-                            
                         </form>
                     </div>
                 </div>
