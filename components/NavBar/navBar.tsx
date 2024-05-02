@@ -80,10 +80,10 @@ const NavBar: React.FC = () => {
                             </Link>
                         </li>
 
-                        <li>
+                        {/* <li>
                             <Link href="/" className="itemsInDropMenu_style">Home
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href="/About" passHref className="itemsInDropMenu_style">About
                             </Link>
@@ -97,18 +97,18 @@ const NavBar: React.FC = () => {
                             <Link href="/PricingPage" passHref className="itemsInDropMenu_style">Pricing
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="#" passHref className="itemsInDropMenu_style">Contact
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href="/CompanyPage" passHref className="itemsInDropMenu_style">Meet the Team
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="#" passHref className="itemsInDropMenu_style">Sign out
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
