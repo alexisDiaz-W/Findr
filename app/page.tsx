@@ -17,21 +17,21 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
         <Link href="/PricingPage" className="lg:block px-10 lg:px-10 text-center">
-          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-100">Pricing</h2>
+          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-500">Pricing</h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50 text-gray-600">
             Find out about our comprehensive pricing plans.
           </p>
         </Link>
 
         <Link href="/ConnectPage" className="lg:block px-10 lg:px-10 text-center">
-          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-100">Company Connect</h2>
+          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-500">Company Connect</h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50 text-gray-600">
             Connect with our sales team to start giving your interns the perfect experience.
           </p>
         </Link>
 
         <Link href="/CompanyPage" className="lg:block px-10 lg:px-10 text-center">
-          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-100">Meet the Team</h2>
+          <h2 className="mb-3 text-2xl font-semibold hover:text-gray-500">Meet the Team</h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50 text-gray-600">
             Meet the team behind Findr.
           </p>
