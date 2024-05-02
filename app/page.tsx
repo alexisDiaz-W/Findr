@@ -1,13 +1,7 @@
 "use client";
-// import React, { useState, useEffect } from 'react';
+
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
-//  import React, { useState, useEffect } from "react";
-// import ResponsiveHamburgerMenu from "./Hmenu";
-// import { FiHome } from 'react-icons/fi';
-
-import SignInIconButton from "./ResponsiveSignInButton/SingInButton";
 import NavBar from "../components/NavBar/navBar";
 import React from "react";
 
@@ -59,20 +53,19 @@ export default function Home() {
           </p>
         </Link>
 
-        <Link
+        {/* <Link
           href="/InternPage"
           className="hidden lg:block px-100 lg:px-100 text-center"
         >
           <h2 className={`mb-3 text-2xl font-semibold hover:text-gray-100`}>
             Intern Sign Up{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              {/* -&gt; */}
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-gray-600`}>
             Interns, sign up here to begin your perfect intern experience.
           </p>
-        </Link>
+        </Link> */}
 
         <Link
           href="/CompanyPage"
