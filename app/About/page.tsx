@@ -4,19 +4,12 @@ import Link from 'next/link'
 export default function page() {
     return (
         <div className="bg-gray-100 min-h-screen"> {/* Change 'bg-blue-100' to any background color you prefer */}
-
-
             <div>
                 <div className="flex ">
-                    <Link href="/" passHref >
-                        {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
-                        <h4 className="dark:text-blue-500 jura text-4xl  text-black cursor-pointer ml-40 mt-4">Fr</h4>
-                        {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
+                    <Link href="/" passHref>
+                        <h4 className="dark:text-blue-500 jura text-4xl text-black cursor-pointer ml-4 mt-4">Fr</h4>
                     </Link>
-
                 </div>
-
-
 
                 <hr className="border-t-2 border-blue-900 my-4 w-full" />
 
