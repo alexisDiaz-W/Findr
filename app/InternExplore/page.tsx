@@ -13,18 +13,19 @@ const fetchUsers = async (companyID: string): Promise<User[]> => {
     const url = `https://bsrwoinpyj.execute-api.us-east-2.amazonaws.com/dev/Findr-Intern-Explore-Page?companyID=${encodeURIComponent(
     companyID
   )}`;
+
     try {
       const response = await axios.get<User[]>(url);
-      return response.data; // Assuming the API directly returns an array of users
+      return response.data; 
     } catch (error) {
       console.error('Failed to fetch users:', error);
-      throw error; // Rethrow or handle error appropriately
+      throw error; 
     }
   };
 
 const UsersPage: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const companyID = "Findr"; // This would realistically come from props, context, or session
+  const companyID = "Findr"; 
 
   useEffect(() => {
     fetchUsers(companyID)

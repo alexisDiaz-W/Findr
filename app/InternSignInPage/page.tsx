@@ -24,7 +24,8 @@ const SignInForm: React.FC = () => {
             if (responseBody.message === 'Login successful') {
                 alert('Login successful!');
                 setTimeout(() => {
-                    router.push('/InternExplore');
+                    //router.push('/InternExplore');
+                    router.push(`/InternExplore?companyID=${responseBody.companyID}`);
                   }, 1000);
             } else if (responseBody.statusCode === 'Unauthorized') {
                 alert('Invalid credentials');
