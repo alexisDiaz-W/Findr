@@ -45,12 +45,12 @@ const SignInForm: React.FC = () => {
             <div className="flex flex-col min-h-screen bg-gray-100">
                 <div>
                     <Link href="/" passHref>
-                        <h4 className="text-blue-500 text-4xl cursor-pointer m-4 ml-10">Fr</h4>
+                        <h4 className="text-blue-500 jura text-4xl cursor-pointer m-4 ml-4">Fr</h4>
                     </Link>
                     <hr className="border-t-2 border-blue-900 my-0" />
                 </div>
                 <div className="flex grow items-center justify-center">
-                    <div className="p-8 space-y-8 rounded-lg shadow-2xl bg-white">
+                    <div className="p-5 space-y-8 rounded-lg shadow-2xl bg-white">
                         <h1 className="text-3xl font-bold text-center text-gray-900 mb-10">Intern Sign In</h1>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
                             <div>
