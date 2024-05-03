@@ -62,18 +62,19 @@ const SignUpForm: React.FC = () => {
       <form className="flex flex-col items-center justify-center p-8 grow text-black" onSubmit={onSubmit}>
         <h3 className="text-2xl font-bold text-indigo-600 mb-8">Intern Sign Up</h3>
         <CompanyDropdown onChange={handleCompanyChange} />
-        {companyError && <span className="text-red-500 text-sm">{companyError}</span>} {/* Display company error here */}
-        {/* Input fields and registration button here */}
+        {companyError && <span className="text-red-500 text-sm">{companyError}</span>}
         <div className="w-full max-w-md space-y-4 mt-5">
-        <div className="form-control">
+          <div className="form-control">
             <input {...register("firstName", { required: true })} placeholder="First Name"
-              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
+              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300"
+              autoComplete="given-name" />
             {errors.firstName && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
 
           <div className="form-control">
             <input {...register("lastName", { required: true })} placeholder="Last Name"
-              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
+              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300"
+              autoComplete="family-name" />
             {errors.lastName && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
 
@@ -85,28 +86,31 @@ const SignUpForm: React.FC = () => {
                 message: "Please enter a valid email address"
               }
             })} placeholder="Email"
-              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
+              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300"
+              autoComplete="email" />
             {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
           </div>
 
-
           <div className="form-control">
             <input {...register("address", { required: true })} placeholder="Address"
-              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
+              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300"
+              autoComplete="street-address" />
             {errors.address && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
 
           <div className="form-control">
             <input type="password" {...register("password", { required: true })} placeholder="Password"
-              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300" />
+              className="w-full px-4 py-3 border-2 border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg shadow-sm transition duration-300"
+              autoComplete="new-password" />
             {errors.password && <span className="text-red-500 text-sm">This field is required</span>}
           </div>
-        <button type="submit"
-          className="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
-          Register
-        </button>
+          <button type="submit"
+            className="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-300">
+            Register
+          </button>
         </div>
       </form>
+
     </div>
   );
 };
