@@ -3,6 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios, { AxiosError } from 'axios';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
     email: string;
@@ -10,13 +11,30 @@ interface FormData {
 }
 
 const SignInForm: React.FC = () => {
+    const router = useRouter();
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
     const onSubmit = async (data: FormData) => {
         try {
             const response = await axios.post('https://bsrwoinpyj.execute-api.us-east-2.amazonaws.com/dev/Findr-UserData/Findr-User-Auth', data);
-            console.log(response.data);
-            alert('Login successful!');
+
+            const responseBody = JSON.parse(response.data.body);
+            
+            // Check the message that is returned inside the response body
+            if (responseBody.message === 'Login successful') {
+                alert('Login successful!');
+                setTimeout(() => {
+                    router.push('/InternExplore');
+                  }, 1000);
+            } else if (responseBody.statusCode === 'Unauthorized') {
+                alert('Invalid credentials');
+            } else if (responseBody.message === 'User not found') {
+                alert("User not found. Try Again.");
+            } else {
+                alert('Login failed'); // Catch other statuses as general failures
+            }
+
+            console.log(response.data); // Log the full response data
         } catch (error) {
             // this error detection does NOT work -AD
             const axiosError = error as AxiosError;  // Type assertion here
