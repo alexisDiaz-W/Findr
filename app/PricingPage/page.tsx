@@ -2,14 +2,17 @@
 "use client"
 
 const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
+  'Interns are provided full features',
+  'Internship resources',
+  'Unlimited Intern Accounts',
   'Official member t-shirt',
 ]
 import NavBar from "../../components/NavBar/navBar"
 
 import React from 'react';
+
+// usd goes under "contact sales"
+// <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
 
 export default function Pricing() {
   
@@ -52,8 +55,7 @@ export default function Pricing() {
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Per Year</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">Contact Sales</span>
                 </p>
                 <a
                   href="#"
@@ -94,8 +96,8 @@ export default function Pricing() {
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Per Year</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$499</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">Contact Sales</span>
+                  
                 </p>
                 <a
                   href="#"
@@ -136,8 +138,7 @@ export default function Pricing() {
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Per Year</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$999</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">Contact Sales</span>
                 </p>
                 <a
                   href="#"
